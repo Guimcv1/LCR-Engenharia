@@ -39,12 +39,12 @@
       /* Padrão geométrico sutil para o fundo */
       .dot-grid { background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 18px 18px; }
       /* Sombras suaves */
-      .soft-shadow { box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08); }
+      .soft-shadow { box-shadow: 0 10px 30px rgba(17, 42, 132, 0.08); }
       /* Animações simples */
       .fade-up {opacity:0; transform: translateY(14px); animation: fadeUp .8s ease-out forwards;}
       @keyframes fadeUp { to { opacity:1; transform: translateY(0); } }
       /* Hero overlay gradiente */
-      .hero-overlay { background: radial-gradient(1200px 600px at 90% 10%, rgba(46,124,247,.25), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(26,74,176,.28), transparent); }
+      .hero-overlay { background: radial-gradient(1200px 600px at 90% 10%, rgba(202, 201, 200, 0.25), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(211, 211, 209, 0.28), transparent); }
     </style>
   </head>
   <body class="min-h-screen text-slate-800 antialiased">
@@ -53,8 +53,8 @@
       <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         <p class="opacity-80">Atendimento: seg–sex, 8h às 18h</p>
         <div class="space-x-6">
-          <a href="tel:+550000000000" class="hover:underline">(00) 0000-0000</a>
-          <a href="mailto:contato@lcrengenharia.com" class="hover:underline">contato@lcrengenharia.com</a>
+          <a href="tel:+556299409011" class="hover:underline">(62) 9940-9011</a>
+          <a href="mailto:lcr.engconsultoria@gmail.com" class="hover:underline">lcr.engconsultoria@gmail.com</a>
         </div>
       </div>
     </div>
@@ -130,8 +130,9 @@
                 <svg viewBox="0 0 800 600" class="w-full h-full">
                   <defs>
                     <linearGradient id="g1" x1="0" x2="1">
-                      <stop offset="0%" stop-color="#2e7cf7" stop-opacity="0.6" />
-                      <stop offset="100%" stop-color="#0b1220" stop-opacity="0.8" />
+                      <!-- Quadradinhos iniciais - COR -->
+                      <stop offset="0%" stop-color="#c0c0c0" stop-opacity="0.6" />
+                      <stop offset="100%" stop-color="#c0c0c0" stop-opacity="0.8" />
                     </linearGradient>
                   </defs>
                   <rect width="800" height="600" fill="url(#g1)"/>
@@ -342,9 +343,9 @@
           <h2 class="text-3xl md:text-4xl font-semibold">Entre em contato</h2>
           <p class="text-slate-600 mt-3">Envie sua necessidade e retornaremos rapidamente.</p>
           <div class="mt-6 space-y-4 text-slate-700">
-            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📍</span> Endereço: Rua Exemplo, 123 — Centro, Cidade/UF</p>
-            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📞</span> Telefone: <a href="tel:+550000000000" class="hover:underline">(00) 0000-0000</a></p>
-            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">✉️</span> E-mail: <a href="mailto:contato@lcrengenharia.com" class="hover:underline">contato@lcrengenharia.com</a></p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📍</span> Endereço: RUA ANA CANDIDA DE OLIVEIRA, 145 — QUADRA 03 LOTE 09, GOIANIA/GO</p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📞</span> Telefone: <a href="tel:+556299409011" class="hover:underline">(62) 9940-9011</a></p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">✉️</span> E-mail: <a href="mailto:lcr.engconsultoria@gmail.com" class="hover:underline">lcr.engconsultoria@gmail.com</a></p>
           </div>
         </div>
         <form class="lg:col-span-3 rounded-2xl bg-white ring-1 ring-slate-200 p-6 soft-shadow">
@@ -404,9 +405,9 @@
         <div>
           <h4 class="font-medium text-white mb-3">Contato</h4>
           <ul class="space-y-2 text-slate-400 text-sm">
-            <li>📍 Rua Exemplo, 123 — Centro, Cidade/UF</li>
-            <li>📞 <a class="hover:text-white" href="tel:+550000000000">(00) 0000-0000</a></li>
-            <li>✉️ <a class="hover:text-white" href="mailto:contato@lcrengenharia.com">contato@lcrengenharia.com</a></li>
+            <li>📍 RUA ANA CANDIDA DE OLIVEIRA, 145 — QUADRA 03 LOTE 09, GOIANIA/GO</li>
+            <li>📞 <a class="hover:text-white" href="tel:+556299409011">(62) 9940-9011</a></li>
+            <li>✉️ <a class="hover:text-white" href="mailto:lcr.engconsultoria@gmail.com">lcr.engconsultoria@gmail.com</a></li>
           </ul>
         </div>
       </div>
@@ -419,7 +420,7 @@
     </footer>
 
     <!-- Botão flutuante WhatsApp -->
-    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="fixed bottom-5 right-5 rounded-full p-4 bg-green-500 text-white soft-shadow hover:scale-105 transition" aria-label="WhatsApp">
+    <a href="https://wa.me/556299409011" target="_blank" rel="noopener" class="fixed bottom-5 right-5 rounded-full p-4 bg-green-500 text-white soft-shadow hover:scale-105 transition" aria-label="WhatsApp">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path d="M12 .5a11.5 11.5 0 0 0-9.9 17.4L.6 23.4l5.7-1.4A11.5 11.5 0 1 0 12 .5Zm6.9 16.4c-.3.9-1.7 1.7-2.4 1.7-.6 0-1.4.3-4.7-1-3.9-1.5-6.4-5.5-6.6-5.8-.2-.3-1.6-2.2-1.6-4.2s1-3 1.4-3.4c.3-.4.8-.5 1-.5h.7c.2 0 .5 0 .7.6.3.9 1.1 3 1.2 3.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.3.3-.4.5-.2.3-.3.5-.1.9.2.4 1 1.7 2.1 2.7 1.4 1.2 2.7 1.6 3.1 1.8.3.1.7.1.9-.1.3-.4 1-1.2 1.2-1.6.2-.3.5-.3.8-.2.3.1 2 .9 2.3 1 .3.1.6.2.7.3.2.1.2.9 0 1.3Z"/></svg>
     </a>
 

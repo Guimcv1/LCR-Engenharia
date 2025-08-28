@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LCR Engenharia — Construção Civil, Obras e Projetos</title>
+    <meta name="description" content="LCR Engenharia: soluções completas em engenharia e construção civil">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f9f6f2',
+                100: '#f1e7da',
+                200: '#e3cfb5',
+                300: '#d2b58d',
+                400: '#c49d6f',
+                500: '#b48e5c', // dourado principal
+                600: '#9d784d',
+                700: '#7f5f3d',
+                800: '#5e462c',
+                900: '#3e2f1c',
+              },
+              silver: {
+                50: '#f2f2f2',
+                100: '#e0e0e0',
+                200: '#cfcfcf',
+                300: '#bfbfbf',
+                400: '#a6a6a6',
+                500: '#8c8c8c',
+                600: '#737373',
+                700: '#595959',
+                800: '#404040',
+                900: '#262626', // fundo dark
+              },
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-silver-900 text-silver-100 font-sans">
+    
+    <!-- Header -->
+    <header class="bg-silver-800 shadow-md">
+      <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center space-x-3">
+          <!-- Espaço para logo -->
+          <div class="w-12 h-12 bg-brand-500 rounded-full"></div>
+          <span class="text-2xl font-bold text-brand-500">LCR Engenharia</span>
+        </div>
+        <nav class="space-x-6 text-silver-300">
+          <a href="#" class="hover:text-brand-400">Início</a>
+          <a href="#" class="hover:text-brand-400">Serviços</a>
+          <a href="#" class="hover:text-brand-400">Projetos</a>
+          <a href="#" class="hover:text-brand-400">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-silver-900 text-center py-20">
+      <h1 class="text-4xl font-extrabold text-brand-500 mb-4">
+        Construindo com Excelência e Inovação
+      </h1>
+      <p class="text-silver-300 max-w-2xl mx-auto">
+        A LCR Engenharia oferece soluções completas em obras e projetos de construção civil,
+        com foco em qualidade, confiança e inovação.
+      </p>
+      <div class="mt-6">
+        <a href="#contato" class="bg-brand-500 text-white px-6 py-3 rounded-lg shadow hover:bg-brand-400">
+          Solicite um Orçamento
+        </a>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="max-w-7xl mx-auto py-16 px-6">
+      <h2 class="text-3xl font-bold text-brand-500 text-center mb-10">Nossos Serviços</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-silver-800 p-6 rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold text-silver-100 mb-2">Construção Civil</h3>
+          <p class="text-silver-300">Execução de obras residenciais, comerciais e industriais com alto padrão de qualidade.</p>
+        </div>
+        <div class="bg-silver-800 p-6 rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold text-silver-100 mb-2">Projetos Estruturais</h3>
+          <p class="text-silver-300">Desenvolvimento de projetos modernos e sustentáveis, alinhados às normas técnicas.</p>
+        </div>
+        <div class="bg-silver-800 p-6 rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold text-silver-100 mb-2">Gerenciamento de Obras</h3>
+          <p class="text-silver-300">Planejamento e acompanhamento de obras para garantir prazos, custos e qualidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-silver-800 py-16 px-6">
+      <h2 class="text-3xl font-bold text-brand-500 text-center mb-8">Fale Conosco</h2>
+      <form class="max-w-2xl mx-auto space-y-4">
+        <input type="text" placeholder="Nome" class="w-full p-3 rounded bg-silver-900 text-silver-100 border border-silver-700">
+        <input type="email" placeholder="E-mail" class="w-full p-3 rounded bg-silver-900 text-silver-100 border border-silver-700">
+        <textarea placeholder="Mensagem" rows="5" class="w-full p-3 rounded bg-silver-900 text-silver-100 border border-silver-700"></textarea>
+        <button type="submit" class="bg-brand-500 text-white px-6 py-3 rounded-lg hover:bg-brand-400">
+          Enviar Mensagem
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-silver-900 text-center py-6 text-silver-400">
+      <p>&copy; 2025 LCR Engenharia — Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
