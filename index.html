@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LCR Engenharia — Construção Civil, Obras e Projetos</title>
+    <meta name="description" content="LCR Engenharia: soluções completas em engenharia e construção civil. Obras, reformas, gerenciamento de projetos, manutenção e consultoria técnica." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="LCR Engenharia" />
+    <meta property="og:description" content="Soluções modernas em engenharia e construção civil." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dummyimage.com/1200x630/0b1220/ffffff&text=LCR+Engenharia" />
+
+    <!-- Tailwind via CDN (ideal para protótipo). Em produção, gere o CSS otimizado. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eef6ff',
+                100: '#dbebff',
+                200: '#b6d7ff',
+                300: '#86bdff',
+                400: '#559cff',
+                500: '#2e7cf7',
+                600: '#1e60d9',
+                700: '#1a4ab0',
+                800: '#183f8e',
+                900: '#142f66',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Padrão geométrico sutil para o fundo */
+      .dot-grid { background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 18px 18px; }
+      /* Sombras suaves */
+      .soft-shadow { box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08); }
+      /* Animações simples */
+      .fade-up {opacity:0; transform: translateY(14px); animation: fadeUp .8s ease-out forwards;}
+      @keyframes fadeUp { to { opacity:1; transform: translateY(0); } }
+      /* Hero overlay gradiente */
+      .hero-overlay { background: radial-gradient(1200px 600px at 90% 10%, rgba(46,124,247,.25), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(26,74,176,.28), transparent); }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-800 antialiased">
+    <!-- Top Bar -->
+    <div class="hidden lg:block bg-slate-900 text-slate-100 text-sm">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+        <p class="opacity-80">Atendimento: seg–sex, 8h às 18h</p>
+        <div class="space-x-6">
+          <a href="tel:+550000000000" class="hover:underline">(00) 0000-0000</a>
+          <a href="mailto:contato@lcrengenharia.com" class="hover:underline">contato@lcrengenharia.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a href="#" class="flex items-center space-x-3">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white font-semibold">L</span>
+            <span class="font-semibold tracking-tight text-slate-900">LCR Engenharia</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-8 text-sm">
+            <a href="#servicos" class="hover:text-brand-700">Serviços</a>
+            <a href="#projetos" class="hover:text-brand-700">Projetos</a>
+            <a href="#sobre" class="hover:text-brand-700">Sobre</a>
+            <a href="#clientes" class="hover:text-brand-700">Clientes</a>
+            <a href="#contato" class="rounded-xl bg-brand-600 text-white px-4 py-2 hover:bg-brand-700 transition">Solicitar Orçamento</a>
+          </nav>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-200" aria-label="Abrir menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 grid gap-3 text-sm">
+          <a href="#servicos" class="py-2">Serviços</a>
+          <a href="#projetos" class="py-2">Projetos</a>
+          <a href="#sobre" class="py-2">Sobre</a>
+          <a href="#clientes" class="py-2">Clientes</a>
+          <a href="#contato" class="py-2 rounded-lg bg-brand-600 text-white text-center">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-slate-950 text-white">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="absolute inset-0 dot-grid text-white/10"></div>
+      <div class="max-w-7xl mx-auto px-4 py-24 lg:py-32 relative">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div class="space-y-6 fade-up">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-white/10 ring-1 ring-white/20">Mais de 10 anos entregando qualidade</span>
+            <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Engenharia com <span class="text-brand-400">excelência</span> do projeto à entrega</h1>
+            <p class="text-white/80 max-w-xl">A LCR Engenharia oferece soluções completas em construção civil, reformas, obras industriais e comerciais, gerenciamento de projetos e manutenção. Resultado, segurança e prazos cumpridos.</p>
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="#contato" class="inline-flex items-center gap-2 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-900 font-medium px-5 py-3 transition">
+                Solicitar orçamento
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 5.4a1 1 0 1 0-1.4 1.4l4.3 4.3H5a1 1 0 1 0 0 2h11.1l-4.3 4.3a1 1 0 0 0 1.4 1.4l6.2-6.2a1 1 0 0 0 0-1.4l-6.2-6.2Z"/></svg>
+              </a>
+              <a href="#projetos" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 ring-1 ring-white/30 hover:bg-white/10 transition">Ver projetos</a>
+            </div>
+            <div class="grid grid-cols-3 gap-6 pt-6">
+              <div>
+                <p class="text-3xl font-bold">150+</p>
+                <p class="text-white/70 text-sm">Obras entregues</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold">98%</p>
+                <p class="text-white/70 text-sm">Satisfação</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold">10+</p>
+                <p class="text-white/70 text-sm">Anos de mercado</p>
+              </div>
+            </div>
+          </div>
+          <div class="fade-up lg:delay-150">
+            <div class="relative rounded-2xl overflow-hidden soft-shadow ring-1 ring-white/10">
+              <div class="aspect-[4/3] bg-gradient-to-br from-brand-600/20 to-slate-900">
+                <!-- Placeholder de imagem (troque por foto da empresa/obra) -->
+                <svg viewBox="0 0 800 600" class="w-full h-full">
+                  <defs>
+                    <linearGradient id="g1" x1="0" x2="1">
+                      <stop offset="0%" stop-color="#2e7cf7" stop-opacity="0.6" />
+                      <stop offset="100%" stop-color="#0b1220" stop-opacity="0.8" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="800" height="600" fill="url(#g1)"/>
+                  <g fill="#ffffff22">
+                    <rect x="60" y="60" width="220" height="140" rx="10" />
+                    <rect x="320" y="60" width="420" height="140" rx="10" />
+                    <rect x="60" y="230" width="680" height="140" rx="10" />
+                    <rect x="60" y="400" width="420" height="140" rx="10" />
+                    <rect x="500" y="400" width="240" height="140" rx="10" />
+                  </g>
+                  <text x="60" y="540" fill="#ffffff" opacity="0.7" font-family="ui-sans-serif, system-ui" font-size="20">Substitua por fotos reais de obras/projetos LCR</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / Selos -->
+    <section class="bg-white border-b border-slate-200/70">
+      <div class="max-w-7xl mx-auto px-4 py-10">
+        <div class="flex flex-wrap items-center justify-center gap-10 opacity-70">
+          <img src="https://dummyimage.com/120x32/ffffff/aaa" alt="Selo ISO 9001" class="h-6 w-auto"/>
+          <img src="https://dummyimage.com/120x32/ffffff/aaa" alt="CREA" class="h-6 w-auto"/>
+          <img src="https://dummyimage.com/120x32/ffffff/aaa" alt="PBQP-H" class="h-6 w-auto"/>
+          <img src="https://dummyimage.com/120x32/ffffff/aaa" alt="NR-18" class="h-6 w-auto"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold">Serviços</h2>
+          <p class="text-slate-600 mt-3">Atuamos em todas as fases do ciclo da construção civil com equipe especializada e foco em resultados.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card -->
+          <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 hover:-translate-y-1 hover:shadow-xl transition soft-shadow">
+            <div class="h-12 w-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v2H3V3Zm3 5h12v13H6V8Zm2 2v9h8v-9H8Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg">Construção e Reformas</h3>
+            <p class="text-slate-600 mt-2">Residencial, comercial e industrial. Obras completas, ampliações e revitalizações com garantia de qualidade.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 hover:-translate-y-1 hover:shadow-xl transition soft-shadow">
+            <div class="h-12 w-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4V4Zm2 4h12v2H6V8Zm-2 4h16v2H4v-2Zm2 4h12v2H6v-2Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg">Projetos &amp; Consultoria</h3>
+            <p class="text-slate-600 mt-2">Arquitetônico, estrutural, elétrico e hidráulico. Laudos, ARTs e regularizações com suporte técnico completo.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 hover:-translate-y-1 hover:shadow-xl transition soft-shadow">
+            <div class="h-12 w-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4v4H6l-2 3v1h16v-1l-2-3h-2V6a4 4 0 0 0-4-4Zm-6 18h12v2H6v-2Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg">Gerenciamento de Obras</h3>
+            <p class="text-slate-600 mt-2">Planejamento, cronogramas, orçamentos e fiscalização para garantir custo, prazo e segurança.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 hover:-translate-y-1 hover:shadow-xl transition soft-shadow">
+            <div class="h-12 w-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3h14v2H5V3ZM3 7h18v2H3V7Zm2 4h14v2H5v-2Zm-2 4h18v2H3v-2Zm2 4h14v2H5v-2Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg">Manutenção Predial</h3>
+            <p class="text-slate-600 mt-2">Preventiva e corretiva, planos de manutenção, inspeções e melhorias de desempenho.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 hover:-translate-y-1 hover:shadow-xl transition soft-shadow">
+            <div class="h-12 w-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 4-9 4-9-4 9-4Zm-9 8 9 4 9-4v6l-9 4-9-4v-6Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg">Infraestrutura &amp; Urbanização</h3>
+            <p class="text-slate-600 mt-2">Pavimentação, drenagem, contenções, muros e obras de arte correntes.</p>
+          </article>
+          <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 hover:-translate-y-1 hover:shadow-xl transition soft-shadow">
+            <div class="h-12 w-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4V5Zm2 4h12v10H6V9Zm2 2v6h8v-6H8Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg">Interiores &amp; Retrofit</h3>
+            <p class="text-slate-600 mt-2">Adequações, conforto e eficiência com foco em sustentabilidade e tecnologia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-20">
+        <div class="flex items-end justify-between gap-6 mb-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-semibold">Projetos em destaque</h2>
+            <p class="text-slate-600 mt-2">Alguns entregáveis recentes da LCR Engenharia.</p>
+          </div>
+          <a href="#contato" class="hidden md:inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-slate-300 hover:bg-slate-50">Ver todos</a>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card projeto -->
+          <figure class="group rounded-2xl overflow-hidden ring-1 ring-slate-200 soft-shadow">
+            <div class="aspect-[4/3] bg-slate-100 relative">
+              <img alt="Centro comercial" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop"/>
+              <figcaption class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                <div>
+                  <h3 class="text-white font-medium">Centro Comercial Aurora</h3>
+                  <p class="text-white/80 text-sm">Execução completa • 8.500 m²</p>
+                </div>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="group rounded-2xl overflow-hidden ring-1 ring-slate-200 soft-shadow">
+            <div class="aspect-[4/3] bg-slate-100 relative">
+              <img alt="Residencial" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"/>
+              <figcaption class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                <div>
+                  <h3 class="text-white font-medium">Residencial Jardim das Artes</h3>
+                  <p class="text-white/80 text-sm">Projeto &amp; obra • 3 torres</p>
+                </div>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="group rounded-2xl overflow-hidden ring-1 ring-slate-200 soft-shadow">
+            <div class="aspect-[4/3] bg-slate-100 relative">
+              <img alt="Indústria" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1518186233392-c232efbf2373?q=80&w=1200&auto=format&fit=crop"/>
+              <figcaption class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                <div>
+                  <h3 class="text-white font-medium">Galpão Industrial Vértice</h3>
+                  <p class="text-white/80 text-sm">Infra • 12.000 m²</p>
+                </div>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl md:text-4xl font-semibold">Quem somos</h2>
+          <p class="text-slate-600 mt-4">A LCR Engenharia é uma empresa brasileira focada em soluções completas para o mercado da construção civil. Com equipe multidisciplinar, aplicamos metodologias ágeis e as melhores práticas do setor para entregar qualidade, segurança e previsibilidade em cada etapa.</p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex items-start gap-3"><span class="h-6 w-6 rounded-lg bg-brand-100 text-brand-700 inline-flex items-center justify-center mt-0.5">✓</span> Compromisso com prazos e orçamento.</li>
+            <li class="flex items-start gap-3"><span class="h-6 w-6 rounded-lg bg-brand-100 text-brand-700 inline-flex items-center justify-center mt-0.5">✓</span> Transparência, segurança e boas práticas (NRs, PBQP-H, ISO).</li>
+            <li class="flex items-start gap-3"><span class="h-6 w-6 rounded-lg bg-brand-100 text-brand-700 inline-flex items-center justify-center mt-0.5">✓</span> Cuidado com o meio ambiente e redução de resíduos.</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contato" class="rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 transition">Fale com nosso time</a>
+            <a href="#projetos" class="rounded-xl ring-1 ring-slate-300 px-5 py-3 hover:bg-white">Ver portfólio</a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden ring-1 ring-slate-200 soft-shadow">
+            <div class="aspect-[4/3] bg-slate-100">
+              <img alt="Equipe em obra" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1487715433499-93acdcfdc08b?q=80&w=1200&auto=format&fit=crop"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clientes -->
+    <section id="clientes" class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold">Clientes &amp; Parcerias</h2>
+          <p class="text-slate-600 mt-3">Construímos relações de longo prazo com foco em valor e confiança.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="rounded-2xl ring-1 ring-slate-200 p-6 soft-shadow">
+            <p class="text-slate-700">“Obra entregue antes do prazo e com excelente acabamento. Recomendo a LCR Engenharia.”</p>
+            <footer class="mt-4 text-sm text-slate-500">— Maria Oliveira, Síndica</footer>
+          </blockquote>
+          <blockquote class="rounded-2xl ring-1 ring-slate-200 p-6 soft-shadow">
+            <p class="text-slate-700">“Equipe técnica preparada e comunicação clara do início ao fim do projeto.”</p>
+            <footer class="mt-4 text-sm text-slate-500">— João Lima, Diretor Industrial</footer>
+          </blockquote>
+          <blockquote class="rounded-2xl ring-1 ring-slate-200 p-6 soft-shadow">
+            <p class="text-slate-700">“Excelente gestão de obra. Cumpriram cronograma e orçamento acordados.”</p>
+            <footer class="mt-4 text-sm text-slate-500">— Ana Santos, Incorporadora</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 dot-grid text-brand-200"></div>
+      <div class="max-w-7xl mx-auto px-4 py-16 relative">
+        <div class="rounded-3xl bg-gradient-to-r from-brand-700 to-brand-500 text-white p-8 md:p-12 soft-shadow">
+          <div class="grid lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <h3 class="text-2xl md:text-3xl font-semibold">Pronto para tirar seu projeto do papel?</h3>
+              <p class="text-white/90 mt-2">Fale com nossos especialistas e receba um orçamento personalizado.</p>
+            </div>
+            <div class="text-left lg:text-right">
+              <a href="#contato" class="inline-flex items-center gap-2 rounded-xl bg-white text-brand-700 font-medium px-5 py-3 hover:bg-white/90 transition">Solicitar orçamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-5 gap-10">
+        <div class="lg:col-span-2">
+          <h2 class="text-3xl md:text-4xl font-semibold">Entre em contato</h2>
+          <p class="text-slate-600 mt-3">Envie sua necessidade e retornaremos rapidamente.</p>
+          <div class="mt-6 space-y-4 text-slate-700">
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📍</span> Endereço: Rua Exemplo, 123 — Centro, Cidade/UF</p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📞</span> Telefone: <a href="tel:+550000000000" class="hover:underline">(00) 0000-0000</a></p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">✉️</span> E-mail: <a href="mailto:contato@lcrengenharia.com" class="hover:underline">contato@lcrengenharia.com</a></p>
+          </div>
+        </div>
+        <form class="lg:col-span-3 rounded-2xl bg-white ring-1 ring-slate-200 p-6 soft-shadow">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="grid gap-1 text-sm">Nome
+              <input type="text" required class="rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Seu nome" />
+            </label>
+            <label class="grid gap-1 text-sm">E-mail
+              <input type="email" required class="rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="seu@email.com" />
+            </label>
+            <label class="grid gap-1 text-sm">Telefone
+              <input type="tel" class="rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="(00) 00000-0000" />
+            </label>
+            <label class="grid gap-1 text-sm">Assunto
+              <input type="text" class="rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Ex.: Reforma comercial" />
+            </label>
+            <label class="md:col-span-2 grid gap-1 text-sm">Mensagem
+              <textarea rows="5" class="rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Conte um pouco sobre sua necessidade..."></textarea>
+            </label>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <label class="flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" class="rounded border-slate-300"/> Concordo em receber contato por e-mail/telefone.</label>
+            <button type="submit" class="rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700">Enviar mensagem</button>
+          </div>
+          <p class="text-xs text-slate-500 mt-3">Este formulário é demonstrativo. Configure a integração (ex.: Formspree/Email) antes de publicar.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-950 text-slate-200">
+      <div class="max-w-7xl mx-auto px-4 py-14 grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white font-semibold">L</span>
+            <span class="font-semibold text-white">LCR Engenharia</span>
+          </div>
+          <p class="text-slate-400">Soluções modernas em engenharia, do planejamento à execução. Qualidade, segurança e transparência.</p>
+        </div>
+        <div>
+          <h4 class="font-medium text-white mb-3">Empresa</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li><a class="hover:text-white" href="#sobre">Sobre</a></li>
+            <li><a class="hover:text-white" href="#servicos">Serviços</a></li>
+            <li><a class="hover:text-white" href="#projetos">Projetos</a></li>
+            <li><a class="hover:text-white" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-medium text-white mb-3">Documentos</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li><a class="hover:text-white" href="#">Política de Qualidade</a></li>
+            <li><a class="hover:text-white" href="#">Política de Privacidade</a></li>
+            <li><a class="hover:text-white" href="#">Código de Conduta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-medium text-white mb-3">Contato</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li>📍 Rua Exemplo, 123 — Centro, Cidade/UF</li>
+            <li>📞 <a class="hover:text-white" href="tel:+550000000000">(00) 0000-0000</a></li>
+            <li>✉️ <a class="hover:text-white" href="mailto:contato@lcrengenharia.com">contato@lcrengenharia.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-6 text-xs text-slate-500 flex items-center justify-between">
+          <p>© <span id="year"></span> LCR Engenharia. Todos os direitos reservados.</p>
+          <p>CREA • PBQP-H • NR-18</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="fixed bottom-5 right-5 rounded-full p-4 bg-green-500 text-white soft-shadow hover:scale-105 transition" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path d="M12 .5a11.5 11.5 0 0 0-9.9 17.4L.6 23.4l5.7-1.4A11.5 11.5 0 1 0 12 .5Zm6.9 16.4c-.3.9-1.7 1.7-2.4 1.7-.6 0-1.4.3-4.7-1-3.9-1.5-6.4-5.5-6.6-5.8-.2-.3-1.6-2.2-1.6-4.2s1-3 1.4-3.4c.3-.4.8-.5 1-.5h.7c.2 0 .5 0 .7.6.3.9 1.1 3 1.2 3.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.3.3-.4.5-.2.3-.3.5-.1.9.2.4 1 1.7 2.1 2.7 1.4 1.2 2.7 1.6 3.1 1.8.3.1.7.1.9-.1.3-.4 1-1.2 1.2-1.6.2-.3.5-.3.8-.2.3.1 2 .9 2.3 1 .3.1.6.2.7.3.2.1.2.9 0 1.3Z"/></svg>
+    </a>
+
+    <script>
+      // Toggle menu mobile
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+      // Ano atual automático
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Suavizar scroll
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          if (id && id.length > 1) {
+            const el = document.querySelector(id);
+            if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
