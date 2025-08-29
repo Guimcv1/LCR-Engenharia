@@ -29,6 +29,7 @@
                 700: '#1a4ab0',
                 800: '#183f8e',
                 900: '#142f66',
+                1000: '#C0C0C0'
               },
             },
           },
@@ -39,12 +40,12 @@
       /* Padrão geométrico sutil para o fundo */
       .dot-grid { background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 18px 18px; }
       /* Sombras suaves */
-      .soft-shadow { box-shadow: 0 10px 30px rgba(17, 42, 132, 0.08); }
+      .soft-shadow { box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08); }
       /* Animações simples */
       .fade-up {opacity:0; transform: translateY(14px); animation: fadeUp .8s ease-out forwards;}
       @keyframes fadeUp { to { opacity:1; transform: translateY(0); } }
       /* Hero overlay gradiente */
-      .hero-overlay { background: radial-gradient(1200px 600px at 90% 10%, rgba(202, 201, 200, 0.25), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(211, 211, 209, 0.28), transparent); }
+      .hero-overlay { background: radial-gradient(1200px 600px at 90% 10%, rgba(196, 196, 196, 0.25), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(208, 208, 208, 0.28), transparent); }
     </style>
   </head>
   <body class="min-h-screen text-slate-800 antialiased">
@@ -100,12 +101,12 @@
         <div class="grid lg:grid-cols-2 gap-10 items-center">
           <div class="space-y-6 fade-up">
             <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-white/10 ring-1 ring-white/20">Mais de 10 anos entregando qualidade</span>
-            <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Engenharia com <span class="text-brand-400">excelência</span> do projeto à entrega</h1>
+            <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Engenharia com <span class="text-brand-900">excelência</span> do projeto à entrega</h1>
             <p class="text-white/80 max-w-xl">A LCR Engenharia oferece soluções completas em construção civil, reformas, obras industriais e comerciais, gerenciamento de projetos e manutenção. Resultado, segurança e prazos cumpridos.</p>
             <div class="flex flex-wrap items-center gap-3">
-              <a href="#contato" class="inline-flex items-center gap-2 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-900 font-medium px-5 py-3 transition">
+              <a href="#contato" class="inline-flex items-center gap-2 rounded-xl bg-brand-1000 hover:bg-brand-400 text-slate-900 font-medium px-5 py-3 transition">
                 Solicitar orçamento
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 5.4a1 1 0 1 0-1.4 1.4l4.3 4.3H5a1 1 0 1 0 0 2h11.1l-4.3 4.3a1 1 0 0 0 1.4 1.4l6.2-6.2a1 1 0 0 0 0-1.4l-6.2-6.2Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="#C0C0C0"><path d="M13.2 5.4a1 1 0 1 0-1.4 1.4l4.3 4.3H5a1 1 0 1 0 0 2h11.1l-4.3 4.3a1 1 0 0 0 1.4 1.4l6.2-6.2a1 1 0 0 0 0-1.4l-6.2-6.2Z"/></svg>
               </a>
               <a href="#projetos" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 ring-1 ring-white/30 hover:bg-white/10 transition">Ver projetos</a>
             </div>
@@ -137,7 +138,7 @@
                     </linearGradient>
                   </defs>
                   <rect width="800" height="600" fill="url(#g1)"/>
-                  <g fill="#ffffff22">
+                  <g fill="#C0C0C0">
                     <image x="60" y="60" width="220" height="220" href="Imagens/Luisa.png" clip-path="url(#clip1)" alt="CREA"/>
                     <rect x="320" y="60" width="420" height="140" rx="10" />
                     <rect x="320" y="230" width="420" height="140" rx="10" />
@@ -147,7 +148,8 @@
                   <defs>
                     <clipPath id="clip1">
                       <rect x="60" y="60" width="220" height="220" rx="10"/>
-                  <text x="60" y="540" fill="#ffffff" opacity="0.7" font-family="ui-sans-serif, system-ui" font-size="20">Substitua por fotos reais de obras/projetos LCR</text>
+                      <!--Cor das caixinhas-->>
+                  <text x="60" y="540" fill="#fffff0" opacity="0.7" font-family="ui-sans-serif, system-ui" font-size="20">Substitua por fotos reais de obras/projetos LCR</text>
                   </defs>
                 </svg>
               </div>
@@ -285,7 +287,7 @@
             <li class="flex items-start gap-3"><span class="h-6 w-6 rounded-lg bg-brand-100 text-brand-700 inline-flex items-center justify-center mt-0.5">✓</span> Cuidado com o meio ambiente e redução de resíduos.</li>
           </ul>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#contato" class="rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 transition">Fale com nosso time</a>
+            <a href="#contato" class="rounded-xl bg-brand-1000 text-white px-5 py-3 hover:bg-brand-700 transition">Fale com nosso time</a>
             <a href="#projetos" class="rounded-xl ring-1 ring-slate-300 px-5 py-3 hover:bg-white">Ver portfólio</a>
           </div>
         </div>
@@ -348,8 +350,8 @@
           <h2 class="text-3xl md:text-4xl font-semibold">Entre em contato</h2>
           <p class="text-slate-600 mt-3">Envie sua necessidade e retornaremos rapidamente.</p>
           <div class="mt-6 space-y-4 text-slate-700">
-            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📍</span> Endereço: RUA ANA CANDIDA DE OLIVEIRA, 145 — QUADRA 03 LOTE 09, GOIANIA/GO</p>
-            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📞</span> Telefone: <a href="tel:+556299409011" class="hover:underline">(62) 9940-9011</a></p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📍</span> Endereço: Rua Ana Candida de Oliveira, 145 — Quadra 03 Lote 09, Goiânia-GO</p>
+            <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">📞</span> Telefone: <a href="tel:+5562999409011" class="hover:underline">(62) 99940-9011</a></p>
             <p class="flex items-center gap-3"><span class="h-9 w-9 rounded-xl bg-brand-100 text-brand-700 inline-flex items-center justify-center">✉️</span> E-mail: <a href="mailto:lcr.engconsultoria@gmail.com" class="hover:underline">lcr.engconsultoria@gmail.com</a></p>
           </div>
         </div>
@@ -411,7 +413,7 @@
           <h4 class="font-medium text-white mb-3">Contato</h4>
           <ul class="space-y-2 text-slate-400 text-sm">
             <li>📍 RUA ANA CANDIDA DE OLIVEIRA, 145 — QUADRA 03 LOTE 09, GOIANIA/GO</li>
-            <li>📞 <a class="hover:text-white" href="tel:+556299409011">(62) 9940-9011</a></li>
+            <li>📞 <a class="hover:text-white" href="tel:+5562999409011">(62) 99940-9011</a></li>
             <li>✉️ <a class="hover:text-white" href="mailto:lcr.engconsultoria@gmail.com">lcr.engconsultoria@gmail.com</a></li>
           </ul>
         </div>
@@ -425,7 +427,7 @@
     </footer>
 
     <!-- Botão flutuante WhatsApp -->
-    <a href="https://wa.me/556299409011" target="_blank" rel="noopener" class="fixed bottom-5 right-5 rounded-full p-4 bg-green-500 text-white soft-shadow hover:scale-105 transition" aria-label="WhatsApp">
+    <a href="https://wa.me/5562999409011" target="_blank" rel="noopener" class="fixed bottom-5 right-5 rounded-full p-4 bg-green-500 text-white soft-shadow hover:scale-105 transition" aria-label="WhatsApp">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path d="M12 .5a11.5 11.5 0 0 0-9.9 17.4L.6 23.4l5.7-1.4A11.5 11.5 0 1 0 12 .5Zm6.9 16.4c-.3.9-1.7 1.7-2.4 1.7-.6 0-1.4.3-4.7-1-3.9-1.5-6.4-5.5-6.6-5.8-.2-.3-1.6-2.2-1.6-4.2s1-3 1.4-3.4c.3-.4.8-.5 1-.5h.7c.2 0 .5 0 .7.6.3.9 1.1 3 1.2 3.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.3.3-.4.5-.2.3-.3.5-.1.9.2.4 1 1.7 2.1 2.7 1.4 1.2 2.7 1.6 3.1 1.8.3.1.7.1.9-.1.3-.4 1-1.2 1.2-1.6.2-.3.5-.3.8-.2.3.1 2 .9 2.3 1 .3.1.6.2.7.3.2.1.2.9 0 1.3Z"/></svg>
     </a>
 
